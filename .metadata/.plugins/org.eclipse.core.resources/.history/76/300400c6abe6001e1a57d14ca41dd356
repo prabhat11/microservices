@@ -1,0 +1,18 @@
+spring.application.name=ApiGaitway
+server.port:8585
+eureka.client.serviceUrl.defaultZone=http://localhost:9001/eureka
+spring.cloud.gateway.discovery.enabled=true
+spring.cloud.gateway.discovery.locator.enabled=true
+
+# Define routes for API Gateway
+spring.cloud.gateway.routes[0].id=UserFacade  # Unique identifier for the route
+spring.cloud.gateway.routes[0].uri=lb://UserFacade # Target microservice URI
+spring.cloud.gateway.routes[0].predicates[0]=Path=/**  # Path pattern to match requests
+
+# Define routes for API account service
+spring.cloud.gateway.routes[0].id=UserFacade  # Unique identifier for the route
+spring.cloud.gateway.routes[0].uri=lb://UserFacade # Target microservice URI
+spring.cloud.gateway.routes[0].predicates[0]=Path=/**  # Path pattern to match requests
+
+
+

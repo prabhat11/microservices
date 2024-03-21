@@ -1,0 +1,16 @@
+package com.account.model;
+
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
+@Data
+public class Account {
+	@Setter
+	@Getter
+	public String accId;
+	@Setter
+	@Getter
+	public String user;
+
+}

@@ -1,0 +1,21 @@
+package com.account.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping(value="v1/api/account")
+public class Accounts {
+	List<Account> lstAccnt= new ArrayList<Account>();
+	@GetMapping("/accounts")
+	public String getAccounts() {
+		
+		return "accounts returned";
+	} 
+	
+	
+}
